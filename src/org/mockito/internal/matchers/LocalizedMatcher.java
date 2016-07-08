@@ -66,4 +66,9 @@ public class LocalizedMatcher implements Matcher, ContainsExtraTypeInformation, 
     public Matcher getActualMatcher() {
         return actualMatcher;
     }
+	
+	@Override
+	public void describeMismatch(Object item, Description mismatchDescription) {
+		// TODO Auto-generated method stub
+	}
 }
