@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.mockito</groupId>
+	<artifactId>org.mockito.releng</artifactId>
+	<version>1.9.5-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	
+	<parent>
+		<groupId>org.eclipseorbit</groupId>
+		<artifactId>org.eclipseorbit.parent</artifactId>
+		<relativePath>../../../../orbit-parent/org.eclipseorbit.parent/pom.xml</relativePath>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	
+	<modules>
+		<module>../org.mockito.target</module>
+		
+		<module>../../plugins/org.mockito</module>
+		
+		<module>../../features/org.mockito.feature</module>
+		
+		<module>../org.mockito.repository</module>
+	</modules>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<configuration>
+					<target>
+						<artifact>
+							<groupId>org.mockito</groupId>
+							<artifactId>org.mockito.target</artifactId>
+							<version>1.9.5-SNAPSHOT</version>
+						</artifact>
+					</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-surefire-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
