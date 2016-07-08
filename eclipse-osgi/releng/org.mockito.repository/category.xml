@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="Mockito Update Site" url="">
+      Mockito Update Site
+   </description>
+	  
+   <feature id="org.mockito.feature"><category name="org.mockito"/></feature>
+   <feature id="org.mockito.feature.source"><category name="org.mockito"/></feature>
+</site>
